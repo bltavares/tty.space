@@ -2,6 +2,9 @@ kickstart.context 'Users'
 
 source recipes/users.sh
 
+kickstart.info 'Enable mail spool for new users'
+sed -i'' 's/CREATE_MAIL_SPOOL=no/CREATE_MAIL_SPOOL=yes/' /etc/default/useradd
+
 kickstart.info 'Seting up /etc/skel files'
 
 mkdir -p /etc/skel/public_html
