@@ -1,6 +1,6 @@
 kickstart.context 'Users'
 
-source recipes/users.sh
+source recipes/user.sh
 
 kickstart.info 'Enable mail spool for new users'
 sed -i'' 's/CREATE_MAIL_SPOOL=no/CREATE_MAIL_SPOOL=yes/' /etc/default/useradd
