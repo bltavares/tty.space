@@ -8,6 +8,7 @@ user.create() {
   userAlreadyExists=$(user.exist? $user)
 
   kickstart.user.create $user 'changeme'
+  chmod 711 $(user.homeFolder $user)
 
   if [ $userAlreadyExists != 0 ]; then
     kickstart.info "New user found, created with default password. Expiring password for $user"

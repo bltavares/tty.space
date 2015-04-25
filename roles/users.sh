@@ -2,6 +2,12 @@ kickstart.context 'Users'
 
 source recipes/users.sh
 
+kickstart.info 'Seting up /etc/skel files'
+
+mkdir -p /etc/skel/public_html
+touch /etc/skel/public_html/index.html
+chmod -R 755 /etc/skel/public_html
+
 kickstart.info 'Setting up *.keys users'
 
 for userFile in files/users/*.keys; do
