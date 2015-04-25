@@ -8,7 +8,7 @@ sed -i'' 's/CREATE_MAIL_SPOOL=no/CREATE_MAIL_SPOOL=yes/' /etc/default/useradd
 kickstart.info 'Seting up /etc/skel files'
 
 mkdir -p /etc/skel/public_html
-touch /etc/skel/public_html/index.html
+cp files/skel/public.html /etc/skel/public_html/index.html
 chmod -R 755 /etc/skel/public_html
 
 kickstart.info 'Setting up *.keys users'
