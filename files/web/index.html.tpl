@@ -8,6 +8,7 @@
         padding: 20px;
         color: deepskyblue;
         background: black;
+        font-family: "Courier New", Courier, monospace;
       }
 
       a {
