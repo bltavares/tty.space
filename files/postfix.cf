@@ -22,3 +22,8 @@ readme_directory = /usr/share/doc/postfix
 inet_protocols = ipv4
 meta_directory = /etc/postfix
 shlib_directory = /usr/lib/postfix
+
+mydestination = $myhostname, localhost.$mydomain, localhost
+inet_interfaces = $myhostname, localhost
+mynetworks_style = host
+default_transport = error: outside mail not deliverable
