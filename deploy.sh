@@ -6,4 +6,4 @@ if ! which kickstart > /dev/null; then
   exit 1
 fi
 
-kickstart deploy root@tty.space users web security mail motd cron
+kickstart deploy root@tty.space users web security mail motd cron talk
