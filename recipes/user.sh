@@ -13,6 +13,7 @@ user.create() {
   if [ $userAlreadyExists != 0 ]; then
     kickstart.info "New user found, created with default password. Expiring password for $user"
     kickstart.mute passwd -e $user
+    echo "$user" >> new_users.tmp
   fi
 }
 

@@ -13,6 +13,8 @@ chmod -R 755 /etc/skel/public_html
 
 kickstart.info 'Setting up *.keys users'
 
+> new_users.tmp
+
 for userFile in files/users/*.keys; do
   kickstart.context "Users >> $userFile"
 

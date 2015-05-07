@@ -1,0 +1,68 @@
+Hey you there,
+
+Welcome to tty.space. I hope you have a good stay here.
+
+This is an open space for you to tinker, learn, share and hack.
+
+http://riotgirl.club wrote:
+> You're encouraged to fuck shit up but don't fuck it up for everyone
+> else (so don't hack the server, please).
+
+This is a shared resource server, so be aware of your usage of memory
+and disk.
+
+We have internally some services running to allow communication with
+other members.
+
+* Mail
+
+We have an internal mail server to directly contact other folks in
+the same server.
+
+For a quick start type `mail username`. It will be prompt for the
+subject and then let you write the message. A line with a single . or
+CTRL-D will finish the message and send the email.
+
+To read your emails you can use the `mail` command.
+
+* NNTP
+
+Network News Transfer Protocol (NNTP) is a protocol similar to the
+email protocol to provide news across nodes. It is used by the famous
+(maybe not so famous anymore) Usenet.
+
+We have a single server running internally, where we can use it as a
+bulletin board or a mailing list.  You can access the server's
+information and post with:
+
+$ tin -r
+
+or
+
+$ slrn
+
+Pick your poison.
+
+* Messaging all logged users
+
+You can use the `wall hello world` command to send a hello world to
+all logged users on the server.
+
+To see who is logged in you can use `who`.
+
+Just say pass by and say hi.
+
+* More tips
+
+There is plenty of information about some of the services and tools on
+Tilde.club's pages. An interesting start point is on
+<http://tilde.club/~anthonydpaul/primer.html>
+
+Feel free to ping your friendly administrator ~bltavares.
+He checks the emails and the NNTP a couple of times per day.
+
+If you feel something is missing, you can start a discussion inside
+the NNTP server.
+
+
+Happy hacking.
