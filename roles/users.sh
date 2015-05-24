@@ -15,6 +15,8 @@ kickstart.info 'Setting up *.keys users'
 
 > new_users.tmp
 
+shopt -s nullglob
+
 for userFile in files/users/*.keys; do
   kickstart.context "Users >> $userFile"
 
