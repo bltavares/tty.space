@@ -8,7 +8,7 @@ kickstart.service.enable sshguard
 
 kickstart.info 'Setting up firewall'
 iptables -F
-iptables -N sshguard
+iptables -N sshguard || true
 iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 iptables -A INPUT -j sshguard
 iptables -A INPUT -i lo -j ACCEPT
