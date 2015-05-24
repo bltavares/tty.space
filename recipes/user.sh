@@ -1,9 +1,11 @@
 user.create() {
   user=$1
-  userAlreadyExists=$(kickstart.user.exists? "$user"; echo $?)
+
+  kickstart.user.exists "$user"
+  userAlreadyExists=$?
 
   kickstart.user.create "$user" 'changeme'
-  chmod 711 "$(user.homeFolder "$user")"
+  chmod 711 "$(kickstart.user.home_folder "$user")"
 
   if [ "$userAlreadyExists" != 0 ]; then
     kickstart.info "New user found, created with default password. Expiring password for $user"
@@ -14,7 +16,7 @@ user.create() {
 
 user.setAuthorizedKeys() {
   user=$1
-  homeFolder=$(kickstart.user.homeFolder "$user")
+  homeFolder=$(kickstart.user.home_folder "$user")
 
   mkdir -p "$homeFolder"/.ssh
   cat > "$homeFolder"/.ssh/authorized_keys
