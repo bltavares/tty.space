@@ -1,8 +1,8 @@
 user.create() {
   user=$1
 
-  kickstart.user.exists "$user"
-  userAlreadyExists=$?
+  userAlreadyExists=0
+  kickstart.user.exists "$user" || userAlreadyExists=$?
 
   kickstart.user.create "$user" 'changeme'
   chmod 711 "$(kickstart.user.home_folder "$user")"
