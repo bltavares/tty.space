@@ -1,4 +1,6 @@
 kickstart.context 'applications'
 
 kickstart.package.install vim
-kickstart.package.install alpine
+
+source recipes/aur.sh
+kickstart.package.installed alpine || nobody.packer -S --noconfirm alpine
