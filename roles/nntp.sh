@@ -1,8 +1,9 @@
 kickstart.context 'NNTP server'
 
 kickstart.info 'Installing NNTP server'
-kickstart.package.install inn
 kickstart.package.install perl-mime-tools
+kickstart.package.install python2
+kickstart.package.install inn
 cp files/nntp/* /etc/inn
 kickstart.service.restart innd
 kickstart.service.enable innd
