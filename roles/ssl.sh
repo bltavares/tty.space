@@ -36,6 +36,6 @@ cd /tmp/certbot
 )
 }
 
-! [ -d /etc/letsencrypt/live/tty.space ] && generate-cert
+generate-cert || true
 
 kickstart.info 'SSL Installed'
