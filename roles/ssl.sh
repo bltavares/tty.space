@@ -19,18 +19,17 @@ kickstart.package.install libffi
 kickstart.package.install ca-certificates
 kickstart.package.install pkg-config
 
-rm -rf /tmp/letsencrypt
-git clone https://github.com/letsencrypt/letsencrypt /tmp/letsencrypt
+rm -rf /tmp/certbot
+git clone https://github.com/certbot/certbot /tmp/certbot
 
 generate-cert() {
 (
-cd /tmp/letsencrypt
-./letsencrypt-auto certonly \
+cd /tmp/certbot
+./certbot-auto certonly \
   -a webroot \
   --webroot-path /var/web \
   --domains tty.space \
   --server https://acme-v01.api.letsencrypt.org/directory \
-  --agree-dev-preview \
   --agree-tos \
   --text \
   --email "$LETSENCRYPT_EMAIL"
