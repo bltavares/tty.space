@@ -1,15 +1,16 @@
 Welcome to tty.space
 
- _   _    *           *            *      
-| |_| |_ _   _   ___ _ __   __ _  ___ ___ 
+ _   _    *           *            *
+| |_| |_ _   _   ___ _ __   __ _  ___ ___
 | __| __| |*| | / __| '_ \ / _` |/ __/ _ \
 | |_| |_| |_| |_\__ \ |_) | (_| | (_|  __/
  \__|\__|\__, (_)___/ .__/ \__,_|\___\___|
          |___/      |_|      *          *
 *
-LATEST NEWS: NNTP Server is setup
+LATEST NEWS: IRC Bouncer running on tty.space:6697. Type `mail` for more information.
+PREVIOUS LATEST NEWS: Ports between 5000-6000 open for personal use
+PREVIOUS LATEST NEWS: NNTP Server is setup
 PREVIOUS LATEST NEWS: Local email is configured
 Have fun.
 
 Contact your friendly local admin in case of issues -> bltavares
-
