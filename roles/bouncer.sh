@@ -24,3 +24,16 @@ kickstart.info 'Installing Push notification module'
     [ -d /tmp/znc-push/.git ] || sudo -u znc git clone https://github.com/jreese/znc-push.git /tmp/znc-push
 )
 kickstart.user.exec znc 'cd /tmp/znc-push/ && make install'
+
+kickstart.info 'Installing Bitlbee bridge'
+
+kickstart.package.install bitlbee
+kickstart.package.install libotr
+
+source recipes/aur.sh
+kickstart.package.installed bitlbee-facebook || nobody.packer -S --noconfirm bitlbee-facebook
+
+cp files/bitlbee.conf /etc/bitlbee/bitlbee.conf
+
+kickstart.service.enable bitlbee
+kickstart.service.restart bitlbee
