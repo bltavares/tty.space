@@ -1,0 +1,53 @@
+Hello tty lovers,
+
+How are things going?
+
+It's been a while since I've offered the possibility of running a bouncer
+to keep everybody connected on IRC, Slack, Facebook.... from your TTY!
+
+So, it happened.
+
+I'm still to write some instructions on how to use it (and I could use some
+help), but if you head to https://tty.space:6697/ and use your username and
+password, it should get you to the control panel!
+
+As always, all the installation process is on GitHub, if you are curious
+and want to suggest anything.
+
+https://github.com/bltavares/tty.space/pull/25
+https://github.com/bltavares/tty.space/pull/26
+
+The service is running ZNC <http://wiki.znc.in/ZNC> as the Bouncer, and
+Bitlbee <https://www.bitlbee.org/main.php/news.r.html> as a a Bridge.
+After you connect to ZNC using an IRC client from your computer, and
+configure it to connect to many different networks.
+
+From ZNC, you will be able to connect to the local Bitlbee server
+(localhost 6667).
+The Bitlbee service is only available from inside the host, because it does
+not provide SSL service.
+
+Bitlbee will allow you to connect to many networks, like Twitter or
+Facebook over the IRC protocol.
+
+In the end, you would have something like the following:
+
+Your Laptop -> ZNC -> Bitlbee -> [Facebook, Twitter, ...]
+
+Your Laptop -> ZNC -> Freenode -> [#docker, #chef, #pixelated]
+
+
+And so on.
+
+There is a plugin already enable to send Push notifications to other
+accounts, so when you are disconnected from your laptop, you might still
+receive notifications.
+It enables many notification services (eg: pushover, pushbullet, webhook)
+and instructions are on the repo <https://github.com/jreese/znc-push>.
+
+Let me know if anything fails, or even send me instructions for your
+favorite client.
+
+Happy Hacking
+--
+Your friendly admin
