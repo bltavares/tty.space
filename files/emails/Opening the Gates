@@ -1,0 +1,21 @@
+Hello everybody!
+
+\o/
+
+https://tty.space is not dead! (Yet!)
+
+Recently I've needed to do some pairing, without VPN, and I found a new utility of having a server available on the internet, so I thought of sharing that with all the fellow tty-ers!
+
+On this PR I've configured ssh and port forwarding, as well as opened 1000 ports for you to use to *what* *e* *ver*! \o/
+https://github.com/bltavares/tty.space/pull/23
+
+I've wrote a bit on how to use SSH and tty.space to achieve full interconectilability promised by the interwebs, even without VPN or nasty NATs.
+
+https://tty.space/~bltavares/using_ssh_to_pair.org
+
+Let me know if it is useful to any of you.
+Also, if there is any idea on how to make tty.space more useful, ping me!
+
+Happy Hacking,
+--
+Your friendly admin
