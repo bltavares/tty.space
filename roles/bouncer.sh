@@ -17,3 +17,10 @@ kickstart.service.restart saslauthd
 kickstart.info 'Refreshing the bouncer'
 kickstart.service.enable znc
 kickstart.service.restart znc
+
+kickstart.info 'Installing Push notification module'
+(
+    cd /tmp
+    [ -d /tmp/znc-push/.git ] || sudo -u znc git clone https://github.com/jreese/znc-push.git /tmp/znc-push
+)
+kickstart.user.exec znc 'cd /tmp/znc-push/ && make install'
