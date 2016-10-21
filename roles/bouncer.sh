@@ -26,7 +26,10 @@ kickstart.info 'Installing Push notification module'
 kickstart.user.exec znc 'cd /tmp/znc-push/ && make install'
 
 kickstart.info 'Installing Bitlbee bridge'
+
 kickstart.package.install bitlbee
+kickstart.package.install libotr
+
 cp files/bitlbee.conf /etc/bitlbee/bitlbee.conf
 
 kickstart.service.enable bitlbee
