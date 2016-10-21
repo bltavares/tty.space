@@ -30,6 +30,9 @@ kickstart.info 'Installing Bitlbee bridge'
 kickstart.package.install bitlbee
 kickstart.package.install libotr
 
+source recipes/aur.sh
+kickstart.package.installed bitlbee-facebook || nobody.packer -S --noconfirm bitlbee-facebook
+
 cp files/bitlbee.conf /etc/bitlbee/bitlbee.conf
 
 kickstart.service.enable bitlbee
