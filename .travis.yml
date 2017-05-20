@@ -1,0 +1,22 @@
+language: bash
+sudo: false
+
+before_install:
+  - git clone https://github.com/bltavares/kickstart.git
+  - openssl aes-256-cbc -K $encrypted_4e7cdbc95c47_key -iv $encrypted_4e7cdbc95c47_iv
+    -in tty.space.enc -out tty.space.key -d
+  - chmod 600 tty.space.key
+  - eval "$(ssh-agent -s)"
+  - ssh-add tty.space.key
+  - ssh-keyscan tty.space >> ~/.ssh/known_hosts
+script: 
+  - PATH=kickstart/bin:$PATH bash deploy.sh
+after_script: 
+  - rm tty.space.key
+  - ssh-agent -k
+addons:
+  apt:
+    packages:
+      - openssh-client
+    ssh_known_hosts:
+      - github.com
