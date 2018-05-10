@@ -1,6 +1,10 @@
 language: bash
 sudo: false
 
+branches:
+  only:
+  - master
+  
 before_install:
   - git clone https://github.com/bltavares/kickstart.git
   - openssl aes-256-cbc -K $encrypted_4e7cdbc95c47_key -iv $encrypted_4e7cdbc95c47_iv
