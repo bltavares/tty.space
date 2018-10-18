@@ -1,1 +1,3 @@
 keys/tty.space filter=git-crypt diff=git-crypt
+keys/env.sh filter=git-crypt diff=git-crypt
+keys/ttyspace-terraform-admin.json filter=git-crypt diff=git-crypt
